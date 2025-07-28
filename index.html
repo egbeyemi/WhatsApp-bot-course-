@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Egbeyemi WhatsApp Bot</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      scroll-behavior: smooth;
+    }
+
+    section {
+      height: 100vh;
+      width: 100%;
+      background: url("https://files.catbox.moe/w5og9u.jpg") no-repeat center center/cover;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    a.button {
+      background-color: #25D366;
+      padding: 15px 25px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    a.button:hover {
+      background-color: #1ebc5a;
+    }
+
+    .next-btn {
+      background-color: rgba(255,255,255,0.1);
+      padding: 10px 20px;
+      border: 1px solid white;
+      color: white;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .next-btn:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <section id="page1">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Welcome to Egbeyemi's WhatsApp Bot Course</h1>
+      <p>Learn how to build, deploy & automate your own WhatsApp bot</p>
+      <button class="next-btn" onclick="location.href='#page2'">Next</button>
+    </div>
+  </section>
+
+  <!-- PAGE 2 -->
+  <section id="page2">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>🔥 What You Get</h1>
+      <p>✅ 24/7 Online WhatsApp Bot<br/>
+         ✅ Automatically Likes Status with Different Reactions<br/>
+         ✅ Views Status Automatically<br/>
+         ✅ Easy to Connect & Deploy<br/>
+         ✅ Teaches You How to Clone & Monetize Your Bot
+      </p>
+      <a class="button" href="https://wa.me/2349139103648" target="_blank">Message Me on WhatsApp</a>
+    </div>
+  </section>
+
+</body>
+</html>
