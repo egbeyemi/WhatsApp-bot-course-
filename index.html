@@ -1,72 +1,103 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Egbeyemi Bot - WhatsApp Course</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egbeyemi WhatsApp Bot Course</title>
   <style>
-    body {
-      background-image: url('https://files.catbox.moe/w5og9u.jpg');
-      background-size: cover;
-      background-position: center;
-      font-family: 'Poppins', sans-serif;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .page {
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://files.catbox.moe/7oaee5.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 1rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1.5rem;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 1rem;
+      margin: 1rem 0;
+    }
+    button {
+      background: #00ff88;
+      color: black;
+      padding: 1rem 2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #00cc6f;
+    }
+    .hidden {
       display: none;
     }
-    .active {
-      display: block;
-    }
-    .animate-entry {
-      animation: fadeSlide 1s ease-in-out;
-    }
-    @keyframes fadeSlide {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
-</head><body class="text-white min-h-screen flex items-center justify-center">
-  <div class="w-full px-4 md:max-w-2xl bg-black bg-opacity-60 p-6 rounded-2xl shadow-xl">
-    <!-- Page 1 -->
-    <div id="page1" class="page active animate-entry text-center">
-      <h1 class="text-4xl font-bold mb-4">Meet <span class="text-green-400">Egbeyemi</span></h1>
-      <p class="text-lg">Your WhatsApp automation partner! 💬</p>
-      <button onclick="nextPage(2)" class="mt-6 px-6 py-2 bg-green-500 hover:bg-green-600 rounded-full font-bold">Next ➡️</button>
-    </div><!-- Page 2 -->
-<div id="page2" class="page text-center">
-  <h2 class="text-3xl font-bold mb-4 animate-entry">🔥 What My Bot Can Do</h2>
-  <ul class="text-left space-y-3 animate-entry">
-    <li>✅ Stay online 24/7</li>
-    <li>✅ Auto-like status with different reactions</li>
-    <li>✅ Auto-view people’s WhatsApp status</li>
-    <li>✅ Lightweight, fast, and simple setup</li>
-  </ul>
-  <button onclick="nextPage(3)" class="mt-6 px-6 py-2 bg-green-500 hover:bg-green-600 rounded-full font-bold animate-bounce">Next ➡️</button>
-</div>
-
-<!-- Page 3 -->
-<div id="page3" class="page text-center">
-  <h2 class="text-3xl font-bold mb-4 animate-entry">💰 Pricing</h2>
-  <p class="mb-3">📘 Course only: <span class="text-yellow-300">₦2,000</span></p>
-  <p class="mb-6">🚀 Course + Deployment: <span class="text-yellow-300">₦3,500</span></p>
-  <a href="https://wa.me/2349139103648" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 rounded-full font-bold animate-bounce">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-5 h-5">
-    Message Me on WhatsApp
-  </a>
-</div>
-
+</head>
+<body>
+  <div class="container" id="page1">
+    <h1>👋 Welcome, boss!</h1>
+    <p>Thanks for stopping by.</p>
+    <p>I'm <strong>Egbeyemi</strong>, the brain behind this powerful WhatsApp bot you're about to explore. Whether you're looking to automate, boost status, or manage your group smartly — you’re in the right place.</p>
+    <button onclick="nextPage('page2')">Next ➡️</button>
+  </div>  <div class="container hidden" id="page2">
+    <h2>🚀 What This Bot Can Do</h2>
+    <ul style="text-align:left; line-height:1.6;">
+      <li>Stay Online 24/7 🔋</li>
+      <li>Auto Like Status with Different Reactions ❤️😂😮</li>
+      <li>Auto View Status 🔍</li>
+      <li>Control Group Smartly 🤖</li>
+      <li>Tag All with a Command 📢</li>
+      <li>Auto Delete Link Sent by Others 🔗❌</li>
+    </ul>
+    <button onclick="nextPage('page3')">Next ➡️</button>
+  </div>  <div class="container hidden" id="page3">
+    <h2>📘 WhatsApp Bot Course</h2>
+    <img src="https://files.catbox.moe/xyi1gc.jpg" alt="Course Image">
+    <p>This course teaches you how to set up and run your own WhatsApp bot like a pro. Perfect if you want to earn or automate.</p>
+    <button onclick="nextPage('page4')">Next ➡️</button>
+  </div>  <div class="container hidden" id="page4">
+    <h2>🛠️ Deployment Service</h2>
+    <img src="https://files.catbox.moe/pwsdrk.jpg" alt="Deployment Image">
+    <p>Too busy to do it yourself? Let me handle your bot deployment from A-Z. Fast, tested, and ready-to-use.</p>
+    <button onclick="nextPage('page5')">Next ➡️</button>
+  </div>  <div class="container hidden" id="page5">
+    <h2>📩 Want To Get Started?</h2>
+    <p>Message me directly on WhatsApp now and let’s begin!</p>
+    <a href="https://wa.me/2349139103648" target="_blank">
+      <button>Message Me on WhatsApp 📲</button>
+    </a>
+    <p style="margin-top: 2rem;">&copy; 2025 Egbeyemi</p>
   </div>  <script>
-    function nextPage(pageNum) {
-      const pages = document.querySelectorAll('.page');
-      pages.forEach(p => p.classList.remove('active'));
-      const next = document.getElementById(`page${pageNum}`);
-      next.classList.add('active');
-      next.classList.add('animate-entry');
+    function nextPage(id) {
+      const sections = document.querySelectorAll('.container');
+      sections.forEach(sec => sec.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
     }
-  </script></body></html>
+  </script></body>
+</html>
