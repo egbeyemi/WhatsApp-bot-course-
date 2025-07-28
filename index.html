@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +37,7 @@
       border-radius: 1rem;
       margin: 1rem 0;
     }
-    button {
+    button, .button {
       background: #00ff88;
       color: black;
       padding: 1rem 2rem;
@@ -46,8 +47,10 @@
       cursor: pointer;
       margin-top: 1rem;
       transition: background 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
     }
-    button:hover {
+    button:hover, .button:hover {
       background: #00cc6f;
     }
     .hidden {
@@ -65,7 +68,9 @@
     <p>Thanks for stopping by.</p>
     <p>I'm <strong>Egbeyemi</strong>, the brain behind this powerful WhatsApp bot you're about to explore. Whether you're looking to automate, boost status, or manage your group smartly — you’re in the right place.</p>
     <button onclick="nextPage('page2')">Next ➡️</button>
-  </div>  <div class="container hidden" id="page2">
+  </div>
+
+  <div class="container hidden" id="page2">
     <h2>🚀 What This Bot Can Do</h2>
     <ul style="text-align:left; line-height:1.6;">
       <li>Stay Online 24/7 🔋</li>
@@ -76,28 +81,39 @@
       <li>Auto Delete Link Sent by Others 🔗❌</li>
     </ul>
     <button onclick="nextPage('page3')">Next ➡️</button>
-  </div>  <div class="container hidden" id="page3">
+  </div>
+
+  <div class="container hidden" id="page3">
     <h2>📘 WhatsApp Bot Course</h2>
     <img src="https://files.catbox.moe/xyi1gc.jpg" alt="Course Image">
     <p>This course teaches you how to set up and run your own WhatsApp bot like a pro. Perfect if you want to earn or automate.</p>
     <button onclick="nextPage('page4')">Next ➡️</button>
-  </div>  <div class="container hidden" id="page4">
+  </div>
+
+  <div class="container hidden" id="page4">
     <h2>🛠️ Deployment Service</h2>
     <img src="https://files.catbox.moe/pwsdrk.jpg" alt="Deployment Image">
     <p>Too busy to do it yourself? Let me handle your bot deployment from A-Z. Fast, tested, and ready-to-use.</p>
     <button onclick="nextPage('page5')">Next ➡️</button>
-  </div>  <div class="container hidden" id="page5">
+  </div>
+
+  <div class="container hidden" id="page5">
     <h2>📩 Want To Get Started?</h2>
     <p>Message me directly on WhatsApp now and let’s begin!</p>
-    <a href="https://wa.me/2349139103648" target="_blank">
-      <button>Message Me on WhatsApp 📲</button>
-    </a>
+    
+    <p><strong>Note:</strong> Once you message me, everything go clear — you go get full info, setup options, and see how e go benefit you.</p>
+
+    <a href="https://wa.me/2349139103648?text=Hi%20Egbeyemi,%20I'm%20interested%20in%20your%20WhatsApp%20bot%20course!" class="button">Chat Me on WhatsApp 📲</a>
+
     <p style="margin-top: 2rem;">&copy; 2025 Egbeyemi</p>
-  </div>  <script>
+  </div>
+
+  <script>
     function nextPage(id) {
       const sections = document.querySelectorAll('.container');
       sections.forEach(sec => sec.classList.add('hidden'));
       document.getElementById(id).classList.remove('hidden');
     }
-  </script></body>
+  </script>
+</body>
 </html>
