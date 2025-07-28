@@ -1,115 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Egbeyemi WhatsApp Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Egbeyemi Bot - WhatsApp Course</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
+    body {
+      background-image: url('https://files.catbox.moe/w5og9u.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Poppins', sans-serif;
     }
-
-    body, html {
-      height: 100%;
-      scroll-behavior: smooth;
+    .page {
+      display: none;
     }
-
-    section {
-      height: 100vh;
-      width: 100%;
-      background: url("https://files.catbox.moe/w5og9u.jpg") no-repeat center center/cover;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
+    .active {
+      display: block;
     }
-
-    .overlay {
-      background: rgba(0, 0, 0, 0.6);
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: 0;
+    .animate-entry {
+      animation: fadeSlide 1s ease-in-out;
     }
-
-    .content {
-      position: relative;
-      z-index: 1;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 2.8em;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-    }
-
-    a.button {
-      background-color: #25D366;
-      padding: 15px 25px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    a.button:hover {
-      background-color: #1ebc5a;
-    }
-
-    .next-btn {
-      background-color: rgba(255,255,255,0.1);
-      padding: 10px 20px;
-      border: 1px solid white;
-      color: white;
-      margin-top: 20px;
-      cursor: pointer;
-      border-radius: 6px;
-    }
-
-    .next-btn:hover {
-      background-color: rgba(255,255,255,0.2);
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
-</head>
-<body>
+</head><body class="text-white min-h-screen flex items-center justify-center">
+  <div class="w-full px-4 md:max-w-2xl bg-black bg-opacity-60 p-6 rounded-2xl shadow-xl">
+    <!-- Page 1 -->
+    <div id="page1" class="page active animate-entry text-center">
+      <h1 class="text-4xl font-bold mb-4">Meet <span class="text-green-400">Egbeyemi</span></h1>
+      <p class="text-lg">Your WhatsApp automation partner! 💬</p>
+      <button onclick="nextPage(2)" class="mt-6 px-6 py-2 bg-green-500 hover:bg-green-600 rounded-full font-bold">Next ➡️</button>
+    </div><!-- Page 2 -->
+<div id="page2" class="page text-center">
+  <h2 class="text-3xl font-bold mb-4 animate-entry">🔥 What My Bot Can Do</h2>
+  <ul class="text-left space-y-3 animate-entry">
+    <li>✅ Stay online 24/7</li>
+    <li>✅ Auto-like status with different reactions</li>
+    <li>✅ Auto-view people’s WhatsApp status</li>
+    <li>✅ Lightweight, fast, and simple setup</li>
+  </ul>
+  <button onclick="nextPage(3)" class="mt-6 px-6 py-2 bg-green-500 hover:bg-green-600 rounded-full font-bold animate-bounce">Next ➡️</button>
+</div>
 
-  <!-- PAGE 1 -->
-  <section id="page1">
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>Welcome to Egbeyemi's WhatsApp Bot Course</h1>
-      <p>Learn how to build, deploy & automate your own WhatsApp bot</p>
-      <button class="next-btn" onclick="location.href='#page2'">Next</button>
-    </div>
-  </section>
+<!-- Page 3 -->
+<div id="page3" class="page text-center">
+  <h2 class="text-3xl font-bold mb-4 animate-entry">💰 Pricing</h2>
+  <p class="mb-3">📘 Course only: <span class="text-yellow-300">₦2,000</span></p>
+  <p class="mb-6">🚀 Course + Deployment: <span class="text-yellow-300">₦3,500</span></p>
+  <a href="https://wa.me/2349139103648" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 rounded-full font-bold animate-bounce">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-5 h-5">
+    Message Me on WhatsApp
+  </a>
+</div>
 
-  <!-- PAGE 2 -->
-  <section id="page2">
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>🔥 What You Get</h1>
-      <p>✅ 24/7 Online WhatsApp Bot<br/>
-         ✅ Automatically Likes Status with Different Reactions<br/>
-         ✅ Views Status Automatically<br/>
-         ✅ Easy to Connect & Deploy<br/>
-         ✅ Teaches You How to Clone & Monetize Your Bot
-      </p>
-      <a class="button" href="https://wa.me/2349139103648" target="_blank">Message Me on WhatsApp</a>
-    </div>
-  </section>
-
-</body>
-</html>
+  </div>  <script>
+    function nextPage(pageNum) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(p => p.classList.remove('active'));
+      const next = document.getElementById(`page${pageNum}`);
+      next.classList.add('active');
+      next.classList.add('animate-entry');
+    }
+  </script></body></html>
